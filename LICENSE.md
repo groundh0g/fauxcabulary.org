@@ -14,3 +14,8 @@ This work is licensed under the Creative Commons Attribution-NonCommercial-NoDer
 * You may not use the material for commercial purposes.
 * If you remix, transform, or build upon the material, you may not distribute the modified material.
 
+**Forking:**
+
+As this material is published in a public repository on GitHub, the author has accepted the Terms of Service which do allow other GitHub users some rights. Specifically, others may view and fork this repository.
+
+https://help.github.com/articles/github-terms-of-service
