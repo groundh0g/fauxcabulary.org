@@ -123,11 +123,14 @@
     	var imgHeight = 0;
     	var imgWidth = 1550;
     	var imgMinHeight = 0;
+    	var imgScale = 1.0;
     	var docScroll = 0;
+    	
     	function onBodyResized() {
     		imgHeight = $("div.canopy img").first().height();
     		imgWidth = $("div.canopy img").first().width();
-    		imgMinHeight = imgWidth / 1550 * 188;
+    		imgScale = imgWidth / 1550;
+    		imgMinHeight = imgScale * 188;
 
     		var bodyMarginTop = Math.round(
     			$("div.canopy").first().hasClass("canopy-full") ?
@@ -135,6 +138,9 @@
     			$("nav.navbar div.container").first().height() + imgMinHeight // disable scroll effect
     		);
     		$("body").css("margin-top", bodyMarginTop + "px");
+    		
+    		var w = Math.round((imgWidth / 3.0 - 60.0) * imgScale);
+    		$("table.siteIcons img").width(w);
 
     		onDocumentScroll();
     	}
