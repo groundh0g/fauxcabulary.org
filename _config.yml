@@ -8,13 +8,13 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : Fauxcabulary
+tagline: false
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
+  name : Joseph Hall
+  email : hello@fauxcabulary.org
+  github : groundh0g
+  twitter : groundh0g
   feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
@@ -80,9 +80,9 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : facebook
     disqus :
-      short_name : jekyllbootstrap
+      short_name : fauxcabulary
     livefyre :
       site_id : 123
     intensedebate :

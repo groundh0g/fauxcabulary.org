@@ -129,14 +129,23 @@
     		imgWidth = $("div.canopy img").first().width();
     		imgMinHeight = imgWidth / 1550 * 188;
 
-    		var bodyMarginTop = $("nav.navbar div.container").first().height() + imgHeight;
+    		var bodyMarginTop = Math.round(
+    			$("div.canopy").first().hasClass("canopy-full") ?
+    			$("nav.navbar div.container").first().height() + imgHeight :  // enable scroll effect
+    			$("nav.navbar div.container").first().height() + imgMinHeight // disable scroll effect
+    		);
     		$("body").css("margin-top", bodyMarginTop + "px");
 
     		onDocumentScroll();
     	}
     	
     	function onDocumentScroll() {
-			$("div.canopy").first().height(Math.max(imgHeight - $(this).scrollTop(), imgMinHeight) + "px");
+    		var amountToScroll = Math.round(
+    			$("div.canopy").first().hasClass("canopy-full") ?
+    			$(this).scrollTop() : // enable scroll effect
+    			2000                  // disable scroll effect
+    		);
+			$("div.canopy").first().height(Math.max(imgHeight - amountToScroll, imgMinHeight) + "px");
     	}
     	
     	$(window).resize(function(){
