@@ -39,13 +39,24 @@
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    
+    <style type="text/css">
+      div.canopy img { 
+      	width:100%;
+      	overflow:hidden;
+      }
+      div.canopy { 
+      	width:100%;
+      	overflow:hidden;
+      }
+    </style>
 
   </head>
 
   <body>
-    <div id="wrap">
-      <nav class="navbar navbar-default" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
+  	<nav class="navbar navbar-inverse navbar-fixed-top">
+  		<div class="container">
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#jb-navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -70,8 +81,22 @@
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
         </div><!-- /.navbar-collapse -->
-      </nav>
 
+  		</div>
+		<div class="fixed-top">
+			<div class="canopy {{ page.canopyStyle }}">
+			  <img border="0" src="{{ BASE_PATH }}/images/fauxcabulary-canopy.png" />
+			</div>
+		</div>
+  	</nav>
+    <div id="wrap">
+<!-- 
+    	<div class="navbar-fixed-top">
+      <nav class="navbar navbar-inverse collapse navbar-collapse" role="navigation">
+
+      </nav>
+    	</div>
+-->
       <div class="container">
         {{ content }}
       </div>
@@ -94,5 +119,38 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	var imgHeight = 0;
+    	var imgWidth = 1550;
+    	var imgMinHeight = 0;
+    	var docScroll = 0;
+    	function onBodyResized() {
+    		imgHeight = $("div.canopy img").first().height();
+    		imgWidth = $("div.canopy img").first().width();
+    		imgMinHeight = imgWidth / 1550 * 188;
+
+    		var bodyMarginTop = $("nav.navbar div.container").first().height() + imgHeight;
+    		$("body").css("margin-top", bodyMarginTop + "px");
+
+    		onDocumentScroll();
+    		console.log($("nav.navbar").first().height() + "px");
+    		
+    	}
+    	
+    	function onDocumentScroll() {
+			$("div.canopy").first().height(Math.max(imgHeight - $(this).scrollTop(), imgMinHeight) + "px");
+    	}
+    	
+    	$(window).resize(function(){
+    		onBodyResized();
+    	});
+    	$(document).ready(function(){
+    		onBodyResized();
+    	});
+    	
+    	$(window).scroll(function(){
+    		onDocumentScroll();
+    	});
+    </script>
   </body>
 </html>
