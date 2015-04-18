@@ -139,7 +139,8 @@
     		);
     		$("body").css("margin-top", bodyMarginTop + "px");
     		
-    		var w = Math.round((imgWidth / 3.0 - 60.0) * imgScale);
+    		var headerWidth = $("div.container").first().width();
+    		var w = Math.round((headerWidth / 3.0 - 60.0) * imgScale);
     		$("table.siteIcons img").width(w);
 
     		onDocumentScroll();
