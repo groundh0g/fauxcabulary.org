@@ -32,7 +32,7 @@ Usage:
 	{% if post_prev_path contains "index.html" %}{% else %}{% assign post_prev_path = post_prev_path | append: "index.html" %}{% endif %}
 	{% if post_prev_path contains "/index.html" %}{% else %}{% assign post_prev_path = post_prev_path | replace: "index.html","/index.html" %}{% endif %}
 	{% assign post_prev_path = post_prev_path | replace: ".io/wayback",".io/fauxcabulary.org/wayback" %}
-{{ post_prev_path }} / {{ post_next_path }}	
+{{BASE_PATH}} / {{ post_prev_path }} / {{ post_next_path }}	
 	<div style="margin-bottom:10px;">
 	
 	<div id="divArchive">
