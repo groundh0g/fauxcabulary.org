@@ -18,7 +18,7 @@ author :
   feedburner : feedname
 
 paginate: 5
-paginate_path: "/wayback/page:num/"
+paginate_path: "/fauxcabulary.org/wayback/page:num/"
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
