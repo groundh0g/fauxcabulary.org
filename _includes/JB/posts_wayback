@@ -32,7 +32,7 @@ Usage:
 	{% if post_prev_path contains "index.html" %}{% else %}{% assign post_prev_path = post_prev_path | append: "index.html" %}{% endif %}
 	{% if post_prev_path contains "/index.html" %}{% else %}{% assign post_prev_path = post_prev_path | replace: "index.html","/index.html" %}{% endif %}
 	{% assign post_prev_path = post_prev_path | replace: ".io/wayback",".io/fauxcabulary.org/wayback" %}
-{{BASE_PATH}} / {{ post_prev_path }} / {{ post_next_path }}	
+
 	<div style="margin-bottom:10px;">
 	
 	<div id="divArchive">
@@ -57,7 +57,7 @@ Usage:
 		<div class="paginationx btn-toolbar">
 			<div class="paginationx btn-group">
 			  {% if paginator.previous_page %}
-				<a href="{{ post_prev_path }}" class="btn-default btn">Previous</a>
+				<a href="{{BASE_PATH}}{{ post_prev_path }}" class="btn-default btn">Previous</a>
 			  {% else %}
 				<a href="" class="btn-default btn disabled">Previous</a>
 			  {% endif %}
@@ -65,7 +65,7 @@ Usage:
 			  <a href="" class="btn-default btn disabled">Page: {{ post_page }} of {{ post_page_count }}</a>
 		  
 			  {% if paginator.next_page %}
-				<a href="{{ post_next_path }}" class="btn-default btn">Next</a>
+				<a href="{{BASE_PATH}}{{ post_next_path }}" class="btn-default btn">Next</a>
 			  {% else %}
 				<a href="" class="btn-default btn disabled">Next</a>
 			  {% endif %}
@@ -106,7 +106,7 @@ Usage:
 		<div class="paginationx btn-toolbar">
 			<div class="paginationx btn-group">
 			  {% if paginator.previous_page %}
-				<a href="{{ post_prev_path }}?show={{ post_query }}" class="btn-default btn">Previous</a>
+				<a href="{{BASE_PATH}}{{ post_prev_path }}?show={{ post_query }}" class="btn-default btn">Previous</a>
 			  {% else %}
 				<a href="" class="btn-default btn disabled">Previous</a>
 			  {% endif %}
@@ -114,7 +114,7 @@ Usage:
 			  <a href="" class="btn-default btn disabled">Page: {{ post_page }} of {{ post_page_count | plus: 1 }}</a>
 		  
 			  {% if paginator.next_page %}
-				<a href="{{ post_next_path }}?show={{ post_query }}" class="btn-default btn">Next</a>
+				<a href="{{BASE_PATH}}{{ post_next_path }}?show={{ post_query }}" class="btn-default btn">Next</a>
 			  {% else %}
 				<a href="" class="btn-default btn disabled">Next</a>
 			  {% endif %}
@@ -155,7 +155,7 @@ Usage:
 		<div class="paginationx btn-toolbar">
 			<div class="paginationx btn-group">
 			  {% if paginator.previous_page %}
-				<a href="{{ post_prev_path }}?show={{ post_query }}" class="btn-default btn">Previous</a>
+				<a href="{{BASE_PATH}}{{ post_prev_path }}?show={{ post_query }}" class="btn-default btn">Previous</a>
 			  {% else %}
 				<a href="" class="btn-default btn disabled">Previous</a>
 			  {% endif %}
@@ -163,7 +163,7 @@ Usage:
 			  <a href="" class="btn-default btn disabled">Page: {{ post_page }} of {{ post_page_count | plus: 1 }}</a>
 		  
 			  {% if paginator.next_page %}
-				<a href="{{ post_next_path }}?show={{ post_query }}" class="btn-default btn">Next</a>
+				<a href="{{BASE_PATH}}{{ post_next_path }}?show={{ post_query }}" class="btn-default btn">Next</a>
 			  {% else %}
 				<a href="" class="btn-default btn disabled">Next</a>
 			  {% endif %}
