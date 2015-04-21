@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{{ page.title }}</title>
+    <title>{{ site.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
@@ -35,23 +35,25 @@
       <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
       <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     -->
-	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-	<link rel="manifest" href="images/favicon/manifest.json">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{BASE_PATH}}/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{BASE_PATH}}/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{BASE_PATH}}/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{BASE_PATH}}/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{BASE_PATH}}/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{BASE_PATH}}/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{BASE_PATH}}/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{BASE_PATH}}/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{BASE_PATH}}/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="{{BASE_PATH}}/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{BASE_PATH}}/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{BASE_PATH}}/images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{BASE_PATH}}/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="{{BASE_PATH}}/images/favicon/manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="msapplication-TileImage" content="{{BASE_PATH}}/images/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
@@ -67,6 +69,32 @@
       	overflow:hidden;
       }
     </style>
+    
+	<script type="text/javascript">
+    	// from http://stackoverflow.com/a/979995
+		var QueryString = function () {
+		  // This function is anonymous, is executed immediately and 
+		  // the return value is assigned to QueryString!
+		  var query_string = {};
+		  var query = window.location.search.substring(1);
+		  var vars = query.split("&");
+		  for (var i=0;i<vars.length;i++) {
+			var pair = vars[i].split("=");
+				// If first entry with this name
+			if (typeof query_string[pair[0]] === "undefined") {
+			  query_string[pair[0]] = pair[1];
+				// If second entry with this name
+			} else if (typeof query_string[pair[0]] === "string") {
+			  var arr = [ query_string[pair[0]], pair[1] ];
+			  query_string[pair[0]] = arr;
+				// If third or later entry with this name
+			} else {
+			  query_string[pair[0]].push(pair[1]);
+			}
+		  } 
+			return query_string;
+		} ();
+    </script>
 
   </head>
 
@@ -122,9 +150,9 @@
 
     <div id="footer">
       <div class="container">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        <p>&copy; 2010 - {{ site.time | date: '%Y' }} {{ site.author.name }}
+          <!-- with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> -->
         </p>
       </div>
     </div>
@@ -134,8 +162,8 @@
 
     <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="{{ ASSET_PATH }}/bootstrap/js/bootstrap.min.js"></script>
+    
     <script type="text/javascript">
     	var imgHeight = 0;
     	var imgWidth = 1550;

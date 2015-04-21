@@ -1,0 +1,182 @@
+{% comment %}<!--
+Collate_posts helper. Collated posts by year and month.
+Usage:
+  1) assign the 'posts_list' variable to a valid array of posts.
+  2) include JB/posts_summary-multiblog
+
+  example 1, all posts:
+    {% assign posts_list = site.posts %}
+    {% assign posts_limit = 25 %}
+    {% include JB/posts_summary-multiblog %}
+
+  example 2:
+    {% assign posts_list = site.categories.codecamps %}
+    {% assign posts_limit = 10 %}
+    {% assign posts_category = "Code Camps" %}
+    {% include JB/posts_summary-multiblog %}
+
+  Ordering:
+    Posts are displayed in reverse chronological order.
+-->{% endcomment %}
+
+	{% assign post_list = paginator.posts %}
+	{% assign post_per_page = site.paginate %}
+	{% assign post_total = paginator.total_posts %}
+	{% assign post_page = paginator.page %}
+	{% assign post_page_count = paginator.total_pages %}
+	
+	<div style="margin-bottom:10px;">
+	
+	<div id="divArchive">
+		{% for post in post_list %}
+			<h3>{{ post.title }}<br/><small>{{ post.date | date: "%B %e, %Y" }}</small></h3>
+			<div style="margin-left:20px;">
+				{% assign categories_list = post.categories %}
+				{% if categories_list and categories_list != empty and "terms" != categories_list.first %}
+					<ul class="tag_box inline">
+						<li><i class="glyphicon glyphicon-open"></i></li>
+						{% include JB/categories_list %}
+					</ul>
+				{% endif %}
+
+				{{ post.content | strip_html | truncatewords:75}}
+
+				<p><strong>&raquo; <a href="{{ BASE_PATH }}{{ post.url }}">View this post.</a></strong></p>
+			</div>
+		{% endfor %}
+	
+		<!-- Pagination links -->
+		<div class="paginationx btn-toolbar">
+			<div class="paginationx btn-group">
+			  {% if paginator.previous_page %}
+				<a href="{{ paginator.previous_page_path }}" class="btn-default btn">Previous</a>
+			  {% else %}
+				<a href="" class="btn-default btn disabled">Previous</a>
+			  {% endif %}
+		  
+			  <a href="" class="btn-default btn disabled">Page: {{ post_page }} of {{ post_page_count }}</a>
+		  
+			  {% if paginator.next_page %}
+				<a href="{{ paginator.next_page_path }}" class="btn-default btn">Next</a>
+			  {% else %}
+				<a href="" class="btn-default btn disabled">Next</a>
+			  {% endif %}
+			</div>
+		</div>
+	</div>
+	
+	{% include JB/sort_collection collection=site.categories.terms sort_by="term" sort_descending=false %}
+	{% assign post_list = sort_result %}
+	{% assign post_query = "TermsAlphabetical" %}
+	{% assign post_per_page = site.paginate %}
+	{% assign post_total = post_list.size %}
+	{% assign post_page = paginator.page %}
+	{% assign post_page_count = post_total | divided_by: post_per_page %}
+	{% if post_total | modulo: post_per_page > 0 %}{% assign post_page_count = post_page_count | add: 1 %}{% endif %}
+	{% assign post_first = post_page | minus: 1  %}
+	{% assign post_first = post_first | times: post_per_page %}
+	
+	<div id="div{{ post_query }}" style="display:none;">
+		{% for post in post_list limit:post_per_page offset:post_first %}
+			<h3>{{ post.title }}<br/><small>{{ post.date | date: "%B %e, %Y" }}</small></h3>
+			<div style="margin-left:20px;">
+				{% assign categories_list = post.categories %}
+				{% if categories_list and categories_list != empty and "terms" != categories_list.first %}
+					<ul class="tag_box inline">
+						<li><i class="glyphicon glyphicon-open"></i></li>
+						{% include JB/categories_list %}
+					</ul>
+				{% endif %}
+
+				{{ post.content | strip_html | truncatewords:75}}
+
+				<p><strong>&raquo; <a href="{{ BASE_PATH }}{{ post.url }}">View this post.</a></strong></p>
+			</div>
+		{% endfor %}
+	
+		<!-- Pagination links -->
+		<div class="paginationx btn-toolbar">
+			<div class="paginationx btn-group">
+			  {% if paginator.previous_page %}
+				<a href="{{ paginator.previous_page_path }}?show={{ post_query }}" class="btn-default btn">Previous</a>
+			  {% else %}
+				<a href="" class="btn-default btn disabled">Previous</a>
+			  {% endif %}
+		  
+			  <a href="" class="btn-default btn disabled">Page: {{ post_page }} of {{ post_page_count | plus: 1 }}</a>
+		  
+			  {% if paginator.next_page %}
+				<a href="{{ paginator.next_page_path }}?show={{ post_query }}" class="btn-default btn">Next</a>
+			  {% else %}
+				<a href="" class="btn-default btn disabled">Next</a>
+			  {% endif %}
+			</div>
+		</div>
+	</div>
+	
+	{% include JB/sort_collection collection=site.categories.terms sort_by="date" sort_descending=true %}
+	{% assign post_list = sort_result %}
+	{% assign post_query = "TermsChronological" %}
+	{% assign post_per_page = site.paginate %}
+	{% assign post_total = post_list.size %}
+	{% assign post_page = paginator.page %}
+	{% assign post_page_count = post_total | divided_by: post_per_page %}
+	{% if post_total | modulo: post_per_page > 0 %}{% assign post_page_count = post_page_count | add: 1 %}{% endif %}
+	{% assign post_first = post_page | minus: 1  %}
+	{% assign post_first = post_first | times: post_per_page %}
+	
+	<div id="div{{ post_query }}" style="display:none;">
+		{% for post in post_list limit:post_per_page offset:post_first %}
+			<h3>{{ post.title }}<br/><small>{{ post.date | date: "%B %e, %Y" }}</small></h3>
+			<div style="margin-left:20px;">
+				{% assign categories_list = post.categories %}
+				{% if categories_list and categories_list != empty and "terms" != categories_list.first %}
+					<ul class="tag_box inline">
+						<li><i class="glyphicon glyphicon-open"></i></li>
+						{% include JB/categories_list %}
+					</ul>
+				{% endif %}
+
+				{{ post.content | strip_html | truncatewords:75}}
+
+				<p><strong>&raquo; <a href="{{ BASE_PATH }}{{ post.url }}">View this post.</a></strong></p>
+			</div>
+		{% endfor %}
+	
+		<!-- Pagination links -->
+		<div class="paginationx btn-toolbar">
+			<div class="paginationx btn-group">
+			  {% if paginator.previous_page %}
+				<a href="{{ paginator.previous_page_path }}?show={{ post_query }}" class="btn-default btn">Previous</a>
+			  {% else %}
+				<a href="" class="btn-default btn disabled">Previous</a>
+			  {% endif %}
+		  
+			  <a href="" class="btn-default btn disabled">Page: {{ post_page }} of {{ post_page_count | plus: 1 }}</a>
+		  
+			  {% if paginator.next_page %}
+				<a href="{{ paginator.next_page_path }}?show={{ post_query }}" class="btn-default btn">Next</a>
+			  {% else %}
+				<a href="" class="btn-default btn disabled">Next</a>
+			  {% endif %}
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	
+	{% assign post_list = nil %}
+	{% assign post_per_page = nil %}
+	{% assign post_total = nil %}
+	{% assign post_page = nil %}
+	{% assign post_page_count = nil %}
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var show = QueryString["show"];
+			if(show) {
+				$("#divArchive").hide();
+				$("#div" + show).show();
+			}
+		});
+	</script>
