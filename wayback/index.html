@@ -3,12 +3,25 @@ layout: page
 ---
 {% include JB/setup %}
 
-<!-- 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
- -->
+<div style="margin-bottom:10px;">
 
-{% include JB/posts_wayback %}
+{% include JB/posts_wayback div_name="divArchive" %}
+
+{% include JB/sort_collection collection=site.categories.terms sort_by="term" sort_descending=false %}
+{% include JB/posts_wayback post_list=sort_result link_param="TermsAlphabetical" preview_word_count=200 %}
+
+{% include JB/sort_collection collection=site.categories.terms sort_by="date" sort_descending=true %}
+{% include JB/posts_wayback post_list=sort_result link_param="TermsChronological" preview_word_count=200 %}
+
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var show = QueryString["show"];
+		if(show) {
+			$("#divArchive").hide();
+			$("#div" + show).show();
+		}
+	});
+</script>
+
