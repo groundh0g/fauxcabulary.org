@@ -17,7 +17,7 @@ author :
   twitter : groundh0g
   feedburner : feedname
 
-paginate: 5
+paginate: 250
 paginate_path: "/wayback/page:num"
 
 # The production_url is only used when full-domain names are needed
