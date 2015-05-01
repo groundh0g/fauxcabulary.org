@@ -7,11 +7,12 @@ layout: page
 
 {% include JB/posts_wayback div_name="divArchive" %}
 
+{% comment %}
 {% include JB/sort_collection collection=site.categories.terms sort_by="term" sort_descending=false %}
 {% include JB/posts_wayback post_list=sort_result link_param="TermsAlphabetical" preview_word_count=200 %}
 
-{% include JB/sort_collection collection=site.categories.terms sort_by="date" sort_descending=true %}
-{% include JB/posts_wayback post_list=sort_result link_param="TermsChronological" preview_word_count=200 %}
+{% include JB/posts_wayback post_list=site.categories.terms link_param="TermsChronological" preview_word_count=200 %}
+{% endcomment %}
 
 </div>
 

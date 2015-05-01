@@ -1,7 +1,6 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title 
-
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: pygments
 
@@ -17,7 +16,7 @@ author :
   twitter : groundh0g
   feedburner : feedname
 
-paginate: 250
+paginate: 50
 paginate_path: "/wayback/page:num"
 
 # The production_url is only used when full-domain names are needed
