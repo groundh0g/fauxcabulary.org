@@ -109,6 +109,10 @@
 		}      
     </style>
     
+	<script type="text/javascript">
+		var whenDocumentReady = function() {
+		};
+	</script>
   </head>
 
   <body>
@@ -180,6 +184,13 @@
     <script type="text/javascript" src="{{ BASE_PATH }}/script/queryString.js"></script>
     <script type="text/javascript" src="{{ BASE_PATH }}/script/collapseHeader.js"></script>
     <script type="text/javascript" src="{{ BASE_PATH }}/script/search.js"></script>
+
+    <script type="text/javascript">
+    	if(whenDocumentReady) {
+    		whenDocumentReady();
+    	}
+    </script>
+	
     
   </body>
 </html>
