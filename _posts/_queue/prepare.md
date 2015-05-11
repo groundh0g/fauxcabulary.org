@@ -1,0 +1,13 @@
+---
+layout: post
+category: terms
+tagline: "Word of the Day"
+tags: [alpha_p]
+term: prepare
+---
+
+<h3>Prepare<br/> <small>&mdash; n. (pre<span>&middot;</span>pare)</small></h3>
+<p><ol>
+<li>before the two;</li>
+<li>the time just before fruit</li>
+</ol></p>

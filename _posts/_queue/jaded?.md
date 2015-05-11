@@ -1,0 +1,12 @@
+---
+layout: post
+category: terms
+tagline: "Word of the Day"
+tags: [alpha_j]
+term: jaded?
+---
+
+<h3>Jaded?<br/> <small>&mdash; n. (ja<span>&middot;</span>ded)</small></h3>
+<p><ol>
+<li>a deceased bird</li>
+</ol></p>

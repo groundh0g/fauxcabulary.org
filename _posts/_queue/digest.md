@@ -1,0 +1,12 @@
+---
+layout: post
+category: terms
+tagline: "Word of the Day"
+tags: [alpha_d]
+term: digest
+---
+
+<h3>Digest<br/> <small>&mdash; n. (di<span>&middot;</span>gest)</small></h3>
+<p><ol>
+<li>a failed joke</li>
+</ol></p>

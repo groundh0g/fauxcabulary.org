@@ -1,0 +1,13 @@
+---
+layout: post
+category: terms
+tagline: "Word of the Day"
+tags: [alpha_a]
+term: assign
+---
+
+<h3>Assign<br/> <small>&mdash; n. (as<span>&middot;</span>sign)</small></h3>
+<p><ol>
+<li>a proctologist's billboard;</li>
+<li>a tramp stamp</li>
+</ol></p>
