@@ -1,0 +1,75 @@
+---
+layout: page
+title: 
+header: Search Results
+---
+{% include JB/setup %}
+
+{% include JB/sort_collection collection=site.categories.terms sort_by="term" sort_descending=false %}
+
+<h1 id="headSearchResults">Search Results</h1>
+
+<div id="divSearchResults"><blockquote>Loading ...</blockquote></div>
+
+<hr />
+
+<div id="divSimilarTerms" style="display:none;">
+<h2>Similar Terms</h2>
+
+{% for post in sort_result %} 
+<div class="divTerm" id="divTerm{{ post.title | upcase }}" style="display:none;">
+	<h3 class="headTerm">{{ post.title }}</h3>
+
+	<p class="bodyTerm">
+		<blockquote>
+			{{ post.content | replace: "&mdash;", "" }}<br/>
+			<a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a>
+		</blockquote>
+	</p>
+</div>
+{% endfor %}
+
+</div>
+
+<script type="text/javascript">
+	function whenSearchTermsReady() {
+		var HighlightSearchText = function(match) {
+			return "<span class='searchTerm'>" + match + "</span>";
+		};
+		var searchText = QueryString["txtSearch"].toUpperCase().trim();
+		var regex = RegExp(searchText,"gi");
+		$("#txtSearch").val(QueryString["txtSearch"]);
+		var results = doSearch();
+		if(results.exactMatch) {
+			$("#divSearchResults").html($("#divTerm" + searchText).html());
+			if(results.length > 1) {
+				for(var i = 0; i < results.length; i++) {
+					if(results[i].title.toUpperCase() !== searchText) {
+						var divTerm = "#divTerm" + results[i].title.toUpperCase();
+						$(divTerm).show();
+						$(divTerm + " .headTerm").html(
+							$(divTerm + " .headTerm").html().replace(regex, HighlightSearchText)
+						);
+						$("#divSimilarTerms").show();
+					}
+				}
+				$(".searchTerm").css("background-color", "yellow");
+			}
+		} else if(results.length > 0) {
+			$("#divSearchResults").html("");
+			for(var i = 0; i < results.length; i++) {
+				var divTerm = "#divTerm" + results[i].title.toUpperCase();
+				$(divTerm + " .headTerm").html(
+					$(divTerm + " .headTerm").html().replace(regex, HighlightSearchText)
+				);
+				$("#divSearchResults").html(
+					$("#divSearchResults").html() + "\n" +
+					$(divTerm).html()
+				);
+			}
+			$(".searchTerm").css("background-color", "yellow");
+		} else {
+			$("#divSearchResults").html("No results for '" + QueryString["txtSearch"] + "'.");
+		}
+	}
+</script>

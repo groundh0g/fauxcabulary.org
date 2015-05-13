@@ -2,12 +2,17 @@ var blogPosts = [];
 
 var searchForTerm = function(text) {
 	var results = [];
+	results.exactMatch = false;
+	text = text.toLowerCase();
 	for(var i = 0; i < blogPosts.length; i++) {
 		var match =
-			blogPosts[i].title.includes(text) ||
-			blogPosts[i].tags.includes(text);
+			blogPosts[i].title.toLowerCase().includes(text) ||
+			blogPosts[i].tags.toLowerCase().includes(text);
 		if(match) {
 			results.push(blogPosts[i]);
+			if(blogPosts[i].title.toLowerCase() === text.toLowerCase()) {
+				results.exactMatch = true;
+			}
 		}
 	}
 	return results;
@@ -21,12 +26,13 @@ var doSearch = function() {
 		// ==========
 		// DEBUG: test search without UI
 		// ==========
-		console.log("Search Hits:");
-		for(var i = 0; i < results.length; i++) {
-			console.log("  " + results[i].title);
-		}
-		console.log("[" + results.length + " matche(s).]");
+// 		console.log("Search Hits:");
+// 		for(var i = 0; i < results.length; i++) {
+// 			console.log("  " + results[i].title);
+// 		}
+// 		console.log("[" + results.length + " matche(s).]");
 		// ==========
+		return results;
 	}
 };
 
@@ -43,7 +49,8 @@ var substringMatcher = function(strs) {
     // iterate through the pool of strings and for any string that
     // contains the substring `q`, add it to the `matches` array
     $.each(strs, function(i, str) {
-      if(str.includes(q)) {
+      var match = str.match(substrRegex);
+      if(match && match.length) {
         matches.push(str);
       }
     });
@@ -82,15 +89,16 @@ $(document).ready(function() {
 		  blogPosts = data;
 		}
 		initTypeahead();
+		if(whenSearchTermsReady) { whenSearchTermsReady(); }
 	  }
 	});
 
-	$("#cmdSearch").click(function () { doSearch(); });
-	$("#txtSearch").keypress(function (e) { 
-		if(e.which === 13) { 
-			doSearch();
-			//e.preventDefault = true;
-			return false;
-		}
-	});
+// 	$("#cmdSearch").click(function () { doSearch(); });
+// 	$("#txtSearch").keypress(function (e) { 
+// 		if(e.which === 13) { 
+// 			doSearch();
+// 			//e.preventDefault = true;
+// 			return false;
+// 		}
+// 	});
 });
