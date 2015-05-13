@@ -23,7 +23,7 @@ header: Search Results
 	<p class="bodyTerm">
 		<blockquote>
 			{{ post.content | replace: "&mdash;", "" }}<br/>
-			<a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a>
+			<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.date | date_to_long_string }}</a>
 		</blockquote>
 	</p>
 </div>
