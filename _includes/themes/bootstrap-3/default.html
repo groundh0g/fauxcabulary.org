@@ -62,11 +62,11 @@
 		var whenSearchTermsReady = function (){};
     </script>
     
-    {% if page.path contains "/gallery.html" %}
+    {% if page.path contains "gallery.html" %}
+		<link href="{{ BASE_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/FullWidthImageSlider/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/FullWidthImageSlider/css/component.css" />
     {% endif %}
-	<link href="{{ BASE_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/FullWidthImageSlider/css/default.css" />
-	<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/FullWidthImageSlider/css/component.css" />
     
     <style type="text/css">
       div.canopy img { 
@@ -203,10 +203,10 @@
     <script type="text/javascript" src="{{ BASE_PATH }}/script/collapseHeader.js"></script>
     <script type="text/javascript" src="{{ BASE_PATH }}/script/search.js"></script>
     
-    {% if page.path contains "/gallery.html" %}
+    {% if page.path contains "gallery.html" %}
+		<script src="{{ BASE_PATH }}/assets/FullWidthImageSlider/js/modernizr.custom.js"></script>
+		<script src="{{ BASE_PATH }}/assets/FullWidthImageSlider/js/jquery.cbpFWSlider.min.js"></script>
     {% endif %}
-	<script src="{{ BASE_PATH }}/assets/FullWidthImageSlider/js/modernizr.custom.js"></script>
-	<script src="{{ BASE_PATH }}/assets/FullWidthImageSlider/js/jquery.cbpFWSlider.min.js"></script>
     
 
     <script type="text/javascript">
