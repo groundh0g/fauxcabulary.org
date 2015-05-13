@@ -5,6 +5,11 @@ var imgScale = 1.0;
 var docScroll = 0;
 
 function onBodyResized() {
+	if($("div.canopy").first().hasClass("canopy-none")) { 
+		var bodyMarginTop = $("nav.navbar div.container").first().height() + imgMinHeight;
+		$("body").css("margin-top", bodyMarginTop + "px");
+		return; 
+	}
 	imgHeight = $("div.canopy img").first().height();
 	imgWidth = $("div.canopy img").first().width();
 	imgScale = imgWidth / 1550;
@@ -25,6 +30,7 @@ function onBodyResized() {
 }
 
 function onDocumentScroll() {
+	if($("div.canopy").first().hasClass("canopy-none")) { return; }
 	var amountToScroll = Math.round(
 		$("div.canopy").first().hasClass("canopy-full") ?
 		$(this).scrollTop() : // enable scroll effect

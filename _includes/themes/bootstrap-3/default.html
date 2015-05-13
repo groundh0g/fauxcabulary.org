@@ -58,18 +58,29 @@
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
     
     <script type="text/javascript">
-    var whenDocumentReady = function (){};
-    var whenSearchTermsReady = function (){};
+		var whenDocumentReady = function (){};
+		var whenSearchTermsReady = function (){};
     </script>
+    
+    {% if page.path contains "/gallery.html" %}
+    {% endif %}
+	<link href="{{ BASE_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/FullWidthImageSlider/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/FullWidthImageSlider/css/component.css" />
     
     <style type="text/css">
       div.canopy img { 
       	width:100%;
       	overflow:hidden;
       }
+      
       div.canopy { 
       	width:100%;
       	overflow:hidden;
+      }
+      
+      div.canopy-none {
+      	display:none;
       }
       
       	/* typeahead.js styles */
@@ -139,7 +150,7 @@
           <ul class="nav navbar-nav">
       	    <li class='{% if page.url contains "/wayback/" %}active{% endif %}'><a href="{{ BASE_PATH }}/wayback/index.html">Archive</a></li>
       	    <li class='{% if page.url contains "/tags.html" %}active{% endif %}'><a href="{{ BASE_PATH }}/tags.html">Tags</a></li>
-      	    <li class='{% if page.url contains "/gallery/" %}active{% endif %}'><a href="{{ BASE_PATH }}/gallery/index.html">Gallery</a></li>
+      	    <li class='{% if page.url contains "/gallery.html" %}active{% endif %}'><a href="{{ BASE_PATH }}/gallery.html">Gallery</a></li>
       	    <li class='{% if page.url contains "/musings.html" %}active{% endif %}'><a href="{{ BASE_PATH }}/musings.html">Musings</a></li>
       	    <li class='{% if page.url contains "/store.html" %}active{% endif %}'><a href="{{ BASE_PATH }}/store.html">Commer&cent;e</a></li>
           </ul>
@@ -191,6 +202,12 @@
     <script type="text/javascript" src="{{ BASE_PATH }}/script/queryString.js"></script>
     <script type="text/javascript" src="{{ BASE_PATH }}/script/collapseHeader.js"></script>
     <script type="text/javascript" src="{{ BASE_PATH }}/script/search.js"></script>
+    
+    {% if page.path contains "/gallery.html" %}
+    {% endif %}
+	<script src="{{ BASE_PATH }}/assets/FullWidthImageSlider/js/modernizr.custom.js"></script>
+	<script src="{{ BASE_PATH }}/assets/FullWidthImageSlider/js/jquery.cbpFWSlider.min.js"></script>
+    
 
     <script type="text/javascript">
     	if(whenDocumentReady) { whenDocumentReady(); }
