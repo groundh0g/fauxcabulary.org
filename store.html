@@ -1,0 +1,38 @@
+---
+layout: page
+title: 
+header: Shameless Plug
+canopyStyle: canopy-none
+---
+{% include JB/setup %}
+
+<div id="cbp-fwslider" class="cbp-fwslider">
+	<ul>
+		<li><a href="https://leanpub.com/fauxcabulary" target="_blank"><img src="{{ BASE_PATH }}/images/digitalAd.png" alt="Fauxcabulary.org Book"/></a></li>
+		<li><a href="http://www.lulu.com/shop/joseph-hall/fauxcabulary/paperback/product-22171375.html" target="_blank"><img src="{{ BASE_PATH }}/images/printAd.png" alt="Fauxcabulary.org Book"/></a></li>
+		<li><a href="#null" target="_blank"><img src="{{ BASE_PATH }}/images/stickerAd.png" alt="Fauxcabulary.org Stickers"/></a></li>
+		<li><a href="{{ BASE_PATH }}"><img src="{{ BASE_PATH }}/images/wwwAd.png" alt="Fauxcabulary.org"/></a></li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	function whenDocumentReady() {
+		/*
+		- how to call the plugin:
+		$( selector ).cbpFWSlider( [options] );
+		- options:
+		{
+			// default transition speed (ms)
+			speed : 500,
+			// default transition easing
+			easing : 'ease'
+		}
+		- destroy:
+		$( selector ).cbpFWSlider( 'destroy' );
+		*/
+		$("#cbp-fwslider").cbpFWSlider({
+			speed: 750,
+			easing: 'ease'
+		});
+	}
+</script>

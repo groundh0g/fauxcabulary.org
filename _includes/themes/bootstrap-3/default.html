@@ -62,7 +62,7 @@
 		var whenSearchTermsReady = function (){};
     </script>
     
-    {% if page.path contains "gallery.html" %}
+    {% if page.path contains "gallery.html" or page.path contains "store.html" %}
 		<link href="{{ BASE_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/FullWidthImageSlider/css/default.css" />
 		<link rel="stylesheet" type="text/css" href="{{ BASE_PATH }}/assets/FullWidthImageSlider/css/component.css" />
@@ -203,7 +203,7 @@
     <script type="text/javascript" src="{{ BASE_PATH }}/script/collapseHeader.js"></script>
     <script type="text/javascript" src="{{ BASE_PATH }}/script/search.js"></script>
     
-    {% if page.path contains "gallery.html" %}
+    {% if page.path contains "gallery.html" or page.path contains "store.html" %}
 		<script src="{{ BASE_PATH }}/assets/FullWidthImageSlider/js/modernizr.custom.js"></script>
 		<script src="{{ BASE_PATH }}/assets/FullWidthImageSlider/js/jquery.cbpFWSlider.min.js"></script>
     {% endif %}
