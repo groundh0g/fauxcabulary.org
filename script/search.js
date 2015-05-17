@@ -22,16 +22,6 @@ var doSearch = function() {
 	var searchText = $("#txtSearch").val();
 	if(searchText.length > 0) {
 		var results = searchForTerm(searchText);
-	
-		// ==========
-		// DEBUG: test search without UI
-		// ==========
-// 		console.log("Search Hits:");
-// 		for(var i = 0; i < results.length; i++) {
-// 			console.log("  " + results[i].title);
-// 		}
-// 		console.log("[" + results.length + " matche(s).]");
-		// ==========
 		return results;
 	}
 };

@@ -17,7 +17,7 @@ header: Search Results
 <h2>Similar Terms</h2>
 
 {% for post in sort_result %} 
-<div class="divTerm" id="divTerm{{ post.title | upcase }}" style="display:none;">
+<div class="divTerm" id='divTerm{{ post.title | strip_html | replace: "&#39;", "" | replace: "'", "" | replace: "+", "" | replace: " ", "" | replace: "è", "" | upcase }}' style="display:none;">
 	<h3 class="headTerm">{{ post.title }}</h3>
 
 	<p class="bodyTerm">
@@ -36,16 +36,18 @@ header: Search Results
 		var HighlightSearchText = function(match) {
 			return "<span class='searchTerm'>" + match + "</span>";
 		};
-		var searchText = QueryString["txtSearch"].toUpperCase().trim();
-		var regex = RegExp(searchText,"gi");
-		$("#txtSearch").val(QueryString["txtSearch"]);
+		var searchText = decodeURI(QueryString["txtSearch"]).replace("+"," ");
+		var searchTextForRegex = searchText.replace("'","\\'").replace("-","\\-").replace("%","\\%");
+		var regex = RegExp(searchTextForRegex,"gi");
+		$("#txtSearch").val(searchText);
 		var results = doSearch();
 		if(results.exactMatch) {
-			$("#divSearchResults").html($("#divTerm" + searchText).html());
+			var divTerm = "#divTerm" + searchText.toUpperCase().replace(/[^a-z0-9]/gi,'');
+			$("#divSearchResults").html($(divTerm).html());
 			if(results.length > 1) {
 				for(var i = 0; i < results.length; i++) {
 					if(results[i].title.toUpperCase() !== searchText) {
-						var divTerm = "#divTerm" + results[i].title.toUpperCase();
+						divTerm = "#divTerm" + results[i].title.toUpperCase().replace(/[^a-z0-9]/gi,'');
 						$(divTerm).show();
 						$(divTerm + " .headTerm").html(
 							$(divTerm + " .headTerm").html().replace(regex, HighlightSearchText)
@@ -58,10 +60,13 @@ header: Search Results
 		} else if(results.length > 0) {
 			$("#divSearchResults").html("");
 			for(var i = 0; i < results.length; i++) {
-				var divTerm = "#divTerm" + results[i].title.toUpperCase();
-				$(divTerm + " .headTerm").html(
-					$(divTerm + " .headTerm").html().replace(regex, HighlightSearchText)
-				);
+				var divTerm = "#divTerm" + results[i].title.toUpperCase().replace(/[^a-z0-9]/gi,'');
+				var $div = $(divTerm + " .headTerm");
+				if($div.length > 0) {
+					$(divTerm + " .headTerm").html(
+						$(divTerm + " .headTerm").html().replace(regex, HighlightSearchText)
+					);
+				}
 				$("#divSearchResults").html(
 					$("#divSearchResults").html() + "\n" +
 					$(divTerm).html()
@@ -69,7 +74,7 @@ header: Search Results
 			}
 			$(".searchTerm").css("background-color", "yellow");
 		} else {
-			$("#divSearchResults").html("No results for '" + QueryString["txtSearch"] + "'.");
+			$("#divSearchResults").html("No results for '" + searchText + "'.");
 		}
 	}
 </script>
