@@ -15,4 +15,5 @@
   Atlas - with a female
   Pseudo - money owed to an attorney
   Taphephobia - an irrational fear of mobile apps
-  
+  Silicon - a funny inmate
+  Engrave - buried
