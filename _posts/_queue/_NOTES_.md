@@ -17,3 +17,4 @@
   Taphephobia - an irrational fear of mobile apps
   Silicon - a funny inmate
   Engrave - buried
+  Follow - to trip near the ground
