@@ -18,3 +18,4 @@
   Silicon - a funny inmate
   Engrave - buried
   Follow - to trip near the ground
+  Chiropractical - appropriate for desert travel
