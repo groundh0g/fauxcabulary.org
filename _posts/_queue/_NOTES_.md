@@ -19,3 +19,4 @@
   Engrave - buried
   Follow - to trip near the ground
   Chiropractical - appropriate for desert travel
+  Emanuel - a PDF
