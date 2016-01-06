@@ -21,3 +21,6 @@
   Chiropractical - appropriate for desert travel
   Emanuel - a PDF
   Benign - the last single-digit age
+  Uric - a statement made to Richard
+  Nineties - bullying by fewer than ten
+  
