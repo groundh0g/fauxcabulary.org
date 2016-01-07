@@ -23,4 +23,9 @@
   Benign - the last single-digit age
   Uric - a statement made to Richard
   Nineties - bullying by fewer than ten
+  Eighties - having consumed a flirt
+  Thousand - your medieval grit
+  Yonder - that fawn
+  Bondage? - the 007 era
+  
   
