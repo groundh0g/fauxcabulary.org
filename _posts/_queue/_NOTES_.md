@@ -27,5 +27,8 @@
   Thousand - your medieval grit
   Yonder - that fawn
   Bondage? - the 007 era
-  
+  Hamstring - a pig's leash
+  Browser? - a forehead, man
+  Summit? - to tally
+  Window? - acquired money
   
