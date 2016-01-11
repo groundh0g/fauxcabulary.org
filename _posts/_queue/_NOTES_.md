@@ -31,4 +31,7 @@
   Browser? - a forehead, man
   Summit? - to tally
   Window? - acquired money
+  Manhandle - a masculine pseudonym
+  Deposit - to resume a movie or song
+  Affiliate - a mare's recent meal
   
