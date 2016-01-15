@@ -34,4 +34,5 @@
   Manhandle - a masculine pseudonym
   Deposit - to resume a movie or song
   Affiliate - a mare's recent meal
+  While - two southern consonants (sometimes)
   
