@@ -1,0 +1,107 @@
+/*
+ * Add your styles here. This file is referenced after the others, so you can override the styles from the theme.
+ */
+
+body { padding-top: 70px; }
+
+/* tag cloud */
+.tag-cloud-0  { font-size: 1.0em; }
+.tag-cloud-1  { font-size: 1.0em; font-style: italic; }
+.tag-cloud-2  { font-size: 1.0em; font-weight: bold; }
+.tag-cloud-3  { font-size: 1.5em; }
+.tag-cloud-4  { font-size: 1.5em; font-style: italic; }
+.tag-cloud-5  { font-size: 1.5em; font-weight: bold;}
+.tag-cloud-6  { font-size: 2.0em; }
+.tag-cloud-7  { font-size: 2.0em; font-style: italic; }
+.tag-cloud-8  { font-size: 2.0em; font-weight: bold; }
+.tag-cloud-9  { font-size: 2.5em; }
+.tag-cloud-10 { font-size: 2.5em; font-weight: bold; }
+/* end tag cloud */
+
+div.contributor {
+    width: 100%;
+    position: relative;
+}
+
+div.contributor img {
+    position: absolute;
+    width: 150px;
+    margin-right: 20px;
+}
+
+div.contributor div.meta {
+    margin-left: 171px;
+}
+
+/* Sidebars */
+
+div.sidebar-left { background-color: #f7f7f7; }
+div.sidebar-left hr { height: 2px; border-color: #888; }
+
+div.sidebar {
+    color: #888;
+}
+
+div.sidebar div.postSummary .title {
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+div.sidebar div.postSummary .title small {
+    font-size:0.75em;
+    font-weight:normal;
+}
+
+div.sidebar div.postSummary .text {
+}
+
+div.post-content div.postSummary .title {
+    font-size:2.0em;
+    font-weight:bolder;
+}
+
+div.post-content div.postSummary .title small {
+    font-size:0.75em;
+    font-weight:normal;
+    line-height: 5px;
+}
+
+div.post-content div.postSummary .text {
+}
+
+/* Sticky footer styles */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 235px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 215px;
+    background-color: #f5f5f5;
+    /*color: #333;*/
+    text-align: center;
+}
+
+.footer h2 {
+    /*color: #000;*/
+    font-weight: bolder;
+}
+
+.footer h3 {
+    /*color: #000;*/
+    font-weight: bold;
+}
+
+/* Search highligher */
+
+.searchHit {
+    background-color: yellow;
+}

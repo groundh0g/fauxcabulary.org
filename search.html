@@ -1,80 +1,60 @@
 ---
 layout: page
-title: 
-header: Search Results
+title: Search Results
 ---
-{% include JB/setup %}
 
-{% include JB/sort_collection collection=site.categories.terms sort_by="term" sort_descending=false %}
-
-<h1 id="headSearchResults">Search Results</h1>
-
-<div id="divSearchResults"><blockquote>Loading ...</blockquote></div>
-
-<hr />
-
-<div id="divSimilarTerms" style="display:none;">
-<h2>Similar Terms</h2>
-
-{% for post in sort_result %} 
-<div class="divTerm" id='divTerm{{ post.title | strip_html | replace: "&#39;", "" | replace: "'", "" | replace: "+", "" | replace: " ", "" | replace: "è", "" | upcase }}' style="display:none;">
-	<h3 class="headTerm">{{ post.title }}</h3>
-
-	<p class="bodyTerm">
-		<blockquote>
-			{{ post.content | replace: "&mdash;", "" }}<br/>
-			<a href="{{ BASE_PATH }}{{ post.url }}">{{ post.date | date_to_long_string }}</a>
-		</blockquote>
-	</p>
-</div>
-{% endfor %}
-
-</div>
+<div id="searchResultsDiv"></div>
 
 <script type="text/javascript">
-	function whenSearchTermsReady() {
-		var HighlightSearchText = function(match) {
-			return "<span class='searchTerm'>" + match + "</span>";
-		};
-		var searchText = decodeURI(QueryString["txtSearch"]).replace("+"," ");
-		var searchTextForRegex = searchText.replace("'","\\'").replace("-","\\-").replace("%","\\%");
-		var regex = RegExp(searchTextForRegex,"gi");
-		$("#txtSearch").val(searchText);
-		var results = doSearch();
-		if(results.exactMatch) {
-			var divTerm = "#divTerm" + searchText.toUpperCase().replace(/[^a-z0-9]/gi,'');
-			$("#divSearchResults").html($(divTerm).html());
-			if(results.length > 1) {
-				for(var i = 0; i < results.length; i++) {
-					if(results[i].title.toUpperCase() !== searchText) {
-						divTerm = "#divTerm" + results[i].title.toUpperCase().replace(/[^a-z0-9]/gi,'');
-						$(divTerm).show();
-						$(divTerm + " .headTerm").html(
-							$(divTerm + " .headTerm").html().replace(regex, HighlightSearchText)
-						);
-						$("#divSimilarTerms").show();
-					}
-				}
-				$(".searchTerm").css("background-color", "yellow");
-			}
-		} else if(results.length > 0) {
-			$("#divSearchResults").html("");
-			for(var i = 0; i < results.length; i++) {
-				var divTerm = "#divTerm" + results[i].title.toUpperCase().replace(/[^a-z0-9]/gi,'');
-				var $div = $(divTerm + " .headTerm");
-				if($div.length > 0) {
-					$(divTerm + " .headTerm").html(
-						$(divTerm + " .headTerm").html().replace(regex, HighlightSearchText)
-					);
-				}
-				$("#divSearchResults").html(
-					$("#divSearchResults").html() + "\n" +
-					$(divTerm).html()
-				);
-			}
-			$(".searchTerm").css("background-color", "yellow");
-		} else {
-			$("#divSearchResults").html("No results for '" + searchText + "'.");
-		}
-	}
+    var whenDocumentReady = whenDocumentReady || function() {};
+    var whenSearchTermsReady = function() {
+        var searchText = decodeURIComponent(QueryString["txtSearch"] || "").split("+").join(" ");
+        if(searchText) {
+            $("#txtSearch").val(searchText);
+            $.each(typeaheadHandler.getData(searchText), function(index, post) {
+                var regex = new RegExp(searchText, "gi");
+                var div = $("<div/>");
+                var header = null;
+                var excerpt = null;
+                var tags = null;
+
+                if(post.title) {
+                    var title = $("<div/>").html(post.title).text();
+                    header = $("<h3/>")
+                            .css("font-weight", "bold")
+                            .html(title.replace(regex, "<span class='searchHit'>$&</span>"));
+                } else {
+                    header = $("<h3/>")
+                            .css("font-weight", "bold")
+                            .text("{Title Unknown}");
+                }
+                var date = $("<span/>");
+                if(post.date) {
+                    date = $("<p/>")
+                        .css("font-weight","bold")
+                        .text(new Date(post.date.substr(0,10)).toString().substr(0,15));
+                }
+                if(post.excerpt) {
+                    excerpt = $("<p/>")
+                            .html(post.excerpt.replace(regex, "<span class='searchHit'>$&</span>"));
+                }
+                if(post.tags) {
+                    var tagsText = post.tags.split(",").sort().join(", ");
+                    tags = $("<p/>")
+                            .html("<b>Tags:</b> " + tagsText.replace(regex, "<span class='searchHit'>$&</span>"));
+                }
+                var link = $("<p/>").html("<a href='" + post.url + "'>View " +
+                        (post.isPost ? "Post" : "Page") +
+                        " &raquo;</a>");
+
+                $("#searchResultsDiv").append($("<div/>")
+                        .append(header  || $("<span/>"))
+                        .append(date    || $("<span/>"))
+                        .append(excerpt || $("<span/>"))
+                        .append(tags    || $("<span/>"))
+                        .append(link)
+                );
+            });
+        }
+    }
 </script>

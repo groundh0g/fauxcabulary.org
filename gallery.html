@@ -1,23 +1,23 @@
 ---
 layout: page
-title: 
-header: 
-canopyStyle: canopy-none
+sidebar_left:
+  sidebars: false
+sidebar_right:
+  sidebars: false
 ---
-{% include JB/setup %}
 
 <div id="cbp-fwslider" class="cbp-fwslider">
 	<ul>
 	{% for file in site.static_files %}
 		{% if file.path contains "/images/gallery/" and file.path contains ".png" %}
-		<li><a href="{{ BASE_PATH }}{{ file.path }}" target="_blank"><img src="{{ BASE_PATH }}{{ file.path }}" alt="Fauxcabulary.org"/></a></li>
+		<li><a href="{{ site.baseurl }}{{ file.path }}" target="_blank"><img src="{{ site.baseurl }}{{ file.path }}" alt="Fauxcabulary.org"/></a></li>
 		{% endif %}
 	{% endfor %}
 	</ul>
 </div>
 
 <script type="text/javascript">
-	function whenDocumentReady() {
+	function whenGalleryReady() {
 		/*
 		- how to call the plugin:
 		$( selector ).cbpFWSlider( [options] );

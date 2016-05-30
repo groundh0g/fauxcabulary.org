@@ -35,4 +35,26 @@
   Deposit - to resume a movie or song
   Affiliate - a mare's recent meal
   While - two southern consonants (sometimes)
-  
+  Annoys - some sound
+  ----
+  Notable - to record cattle
+  Condescending - a prisoner on his way down
+  Construct - hit forcibly by an inmate
+  Matrix - post-April prestidigitation
+  Identity - something uttered by a breast
+  Define - to remove a fee
+  Episode - above a seamstress
+  Illiterate - eighth in a series of young sick animals
+  Rubbish - to massage a British mistake
+  Netflix - to toss a mesh
+  Thicken - fat relatives
+  Phoenix - to eliminate a tax
+  Cuties - attractive vowels
+  Largesse - a huge consonant
+  Adultery - an established arbour; a slow grownup
+  Unix - a command to remove something
+  Napalm - no hands allowed
+  Mastered - group poop
+  Foreclosed - having shut down several shops
+  Dandelions - a gay pride
+  Generating - a classification or ranking of Bruce or Caitlyn

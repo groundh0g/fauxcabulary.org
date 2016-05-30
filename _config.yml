@@ -1,133 +1,289 @@
-# This is the default format. 
-# For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
-
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
+# Welcome to Jekyll!
 #
-title : Fauxcabulary
-tagline: false
-author :
-  name : Joseph Hall
-  email : hello@fauxcabulary.org
-  github : groundh0g
-  twitter : groundh0g
-  feedburner : feedname
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-paginate: 100
-paginate_path: "/wayback/page:num"
+# Site settings
+title: Jaytch!             # overridden in  jaytch.title, but some other templates may use this
+tagline: The Jekyll Helper # overridden in  jaytch.tagline, but some other templates may use this
+email: hello@fauxcabulary.org # overridden in  jaytch.authors, but some other templates may use this
+description: > # overridden in  jaytch.description, but some other templates may use this
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+# FIXME: url: "http://groundh0g.github.io" # the base hostname & protocol for your site
+url: "http://fauxcabulary.org" # the base hostname & protocol for your site
+twitter_username: groundh0g # overridden in  jaytch.authors, but some other templates may use this
+github_username:  groundh0g # overridden in  jaytch.authors, but some other templates may use this
 
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-#production_url : //groundh0g.github.io/fauxcabulary.org
-production_url : http://fauxcabulary.org
+layouts_dir: ./_layouts/daily # valid values are:
+      #    blog       - what 99% of folks will use
+      #    book       - an open-source book
+      #    daily      - a post-a-day site
+      #    project    - a project or product site
+      #    soon       - a "coming soon" site
+      #    webapp     - a web application, wrapped with a blog
 
-# All Jekyll-Bootstrap specific configurations are namespaced into this hash
-#
-JB :
-  version : 0.3.0
+# Build settings
+markdown: kramdown
 
-  # All links will be namespaced by BASE_PATH if defined.
-  # Links in your website should always be prefixed with {{BASE_PATH}}
-  # however this value will be dynamically changed depending on your deployment situation.
-  #
-  # CNAME (http://yourcustomdomain.com)
-  #   DO NOT SET BASE_PATH 
-  #   (urls will be prefixed with "/" and work relatively)
-  #
-  # GitHub Pages (http://username.github.io)
-  #   DO NOT SET BASE_PATH 
-  #   (urls will be prefixed with "/" and work relatively)
-  #
-  # GitHub Project Pages (http://username.github.io/project-name)
-  #
-  #   A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
-  #  REQUIRED! Set BASE_PATH to: http://username.github.io/project-name
-  #
-  # CAUTION:
-  #   - When in Localhost, your site will run from root "/" regardless of BASE_PATH
-  #   - Only the following values are falsy: ["", null, false]
-  #   - When setting BASE_PATH it must be a valid url.
-  #     This means always setting the protocol (http|https) or prefixing with "/"
-  #BASE_PATH : //groundh0g.github.io/fauxcabulary.org
+# Jaytch settings
+jaytch:
+  version : 0.1.0
 
-  # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
-  # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
-  #
-  # Override this by defining an absolute path to assets here.
-  # ex: 
-  #   http://s3.amazonaws.com/yoursite/themes/watermelon
-  #   /assets
-  #
-  ASSET_PATH : false
+  title: Jaytch!             # Your blog or site title.
+  tagline: The Jekyll Helper # Your blog or site tagline.
+  description: > # An awesome description of your blog or site.
+    A rewite of JekyllBootstrap (plusjade/jekyll-bootstrap) that
+    is built from the ground up to support Jekyll 3.x and Bootstrap 3.x,
+    while targeting the dependencies of GitHub Pages.
 
-  # These paths are to the main pages Jekyll-Bootstrap ships with.
-  # Some JB helpers refer to these paths; change them here if needed.
-  #
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  atom_path : /atom.xml
-  rss_path : /rss.xml
+  page_404: sticky # badge | dog | droids | glass | link | milk | monster | potty | shrug | sticky | tweet | zork
+  tweetHash:     "jaytch #blogs #OSS" # don't hash first tag
+  tweetShoutOut: "GetJaytch"
 
-  # Settings for comments helper
-  # Set 'provider' to the comment provider you want to use.
-  # Set 'provider' to false to turn commenting off globally.
-  #
-  comments :
-    provider : facebook
+  search: # valid values are: true | false | {number}
+    title:     true # always search
+    tags:      true # always search
+    keywords:  true # always search
+    excerpt:   2000 # only search when fewer than 2001 posts
+    inclPages: false # valid values are: true | false
+
+  layout:
+    minified: true          # Use *.min.css and *.min.js, when available.
+    usecdn: false           # Use CDN (content delivery network), when supported.
+    customcss: custom.css   # loaded after theme css files
+    customjs:  custom.js    # loaded after theme js files
+    framework: bootstrap-v3 # default | bootstrap-v3
+    theme: default            # When used by bootstrap-v3, valid values are:
+                              #    default | cerulean | cosmo | cyborg |
+                              #    darkly | flatly | journal | lumen | paper |
+                              #    readable | sandstone | simplex | slate |
+                              #    spacelab | superhero | united | yeti
+    template: # template is determined by site.layouts_dir (eg. blog, project, book, ...)
+      blog:
+        nav_links: [ # the main menu links at the top of every page
+          "Archive|/archive",
+          "Categories|/categories",
+          "Tags|/tags",
+          "Contributors|/contributors",
+          "About|/about"
+        ]
+        sidebar_left:
+          sidebars: false # false | ["facebook", "twitter", ...]
+        sidebar_right:
+          sidebars: ["tagcloud", "posts", "calendar", "countdown", "quote", "quote2", "quote3", "quote4", "twitter"] # false | ["facebook", "twitter", ...]
+          columns:  3
+          hideForHome: false
+          hideForPage: false
+          hideForPost: false
+
+      book:
+        nav_links: [ # the main menu links at the top of every page
+          "The Book|/index",
+          "The Author|/author",
+          "The Camps|/contributors",
+          "The Blog|/blog",
+          "The Store|/store"
+        ]
+
+      daily:
+        title: Fauxcabulary.org
+        tagline: Fake definitions. Real funny.
+        nav_inverse: true
+        nav_links: [ # the main menu links at the top of every page
+          "Archive|/archive",
+          #"Tags|/tags",
+          "Gallery|/gallery",
+          "Commer¢e|/store"
+        ]
+        sidebar_left:
+          sidebars: ["quote", "custom", "postOfTheDay", "tagcloud"] # false | ["facebook", "twitter", ...]
+          columns:  3
+          hideForHome: false
+          hideForPage: false
+          hideForPost: false
+        sidebar_right:
+          sidebars: false # false | ["facebook", "twitter", ...]
+          columns:  3
+          hideForHome: false
+          hideForPage: false
+          hideForPost: false
+
+      project:
+        title: BYRD
+        tagline: Give'm the BYRD!
+        nav_inverse: true
+        nav_links: [ # the main menu links at the top of every page
+          "Blog &amp; News|/blog",
+          "About|/about",
+          "Contributors|/contributors",
+          [ "Documentation", # dropdown label
+            # dropdown menu items:
+            "Create a Blog in 5 Minutes|/docs/create-a-blog-in-5-minutes",
+            "Configuration Settings Explained|/docs/configuration-settings-explained",
+            "Frameworks, Themes,  &amp; Templates|/docs/layouts-frameworks-themes-and-templates",
+            "Specifying a 404 Page|/docs/specifying-a-404-page",
+            "Sidebars, Widgets, &amp; Snips|/docs/widgets-and-snips",
+            "Using Author Bios|/docs/using-author-bios",
+            "Hosting on GitHub Pages|/docs/hosting-on-github-pages",
+            "---",
+            "Frequently Asked Questions|/docs/faqs"
+          ]
+        ]
+        sidebar_left:
+          sidebars: false # false | ["facebook", "twitter", ...]
+          columns:  3
+          hideForHome: true
+          hideForPage: true
+          hideForPost: false
+        sidebar_right:
+          sidebars: ["posts", "tagcloud"] # false | ["facebook", "twitter", ...]
+          columns:  3
+          hideForHome: true
+          hideForPage: true
+          hideForPost: false
+
+      soon:
+        nav_links: [ # the main menu links at the top of every page
+          "Blog &amp; News|/blog",
+          "The Team|/contributors",
+          "About|/about",
+          "Contact Us|/contact"
+        ]
+
+    sidebars:
+      facebook: #https://developers.facebook.com/docs/plugins/page-plugin/
+        page:   Fauxcabulary
+        title:  Fauxcabulary.org
+      facebook2:
+        type:  facebook
+        page:  Codetopia
+      twitter:    # https://twitter.com/settings/widgets/new
+        name:     GetJaytch
+        widgetId: 709112005668503552
+      googleplus: # https://www.kycosoftware.com/code/googleplus-feed-widget-2
+        profileId: 113415901204258128457 # +JosephHall_groundh0g
+      tagcloud:
+        title:   "Tag Cloud"
+        maxTags: 20
+      author:
+        type:  author
+      posts:
+        type:  posts
+        limit: # default 3
+        words: # default 15
+        showViewPostLink: false
+        showArchiveLink: false
+        archiveUrl: "/archive"
+        category: # default is all
+        tag:      # default is all
+      postOfTheDay:
+        type:  posts
+        limit: 1 # default 3
+        words: 75 # default 15
+        showViewPostLink: false
+        showArchiveLink: false
+        archiveUrl: "/archive"
+        category: term # default is all
+        tag:      # default is all
+      quote:
+        type: quote
+        title:
+        quote: # use page's quote
+      quote2:
+        type: quote
+        quote: You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality. -- <a href="http://www.brainyquote.com/quotes/authors/w/walt_disney.html">Walt Disney</a>
+      quote3:
+        type: quote
+        quote: Women are like teabags. We don't know our true strength until we are in hot water!
+      quote4:
+        type: quote
+        quote: # use the page's quote
+      calendar:
+        title: History ...
+        date:  # date of most recent post
+        width: 100%
+      countdown:
+        title:    Site Age
+        class:    countup
+        mode:     inline # block
+        datetime: # page.date
+      custom:
+        type: custom
+        path: daily-masthead.md
+
+  authors:
+    groundh0g:
+      name:       Joseph Hall
+      alias:      groundh0g
+      image:      images/contributors/groundh0g.png
+      role:       Programmer / Writer
+      bio: > # brief description goes here
+        Joe lives with his wife and three daughters in Newnan, Georgia. Every
+        summer, Joe teaches high school students how to write games during an
+        intense weeklong course in North Carolina for Landry Academy. In his free
+        time, Joe dabbles in sketching, cartooning, and creating 3D models. When
+        you see his artistic creations, you’ll understand why he makes his living
+        as a programmer.
+      email:      hello@codetopia.com
+      website:    http://codetopia.com/
+      twitter:    groundh0g
+      facebook:   groundh0g
+      youtube:    groundh0g
+      instagram:  groundh0g72
+      #googleplus: groundh0g
+      github:     groundh0g
+      deviant:    groundh0g
+      linkedin:   groundh0g
+      pinterest:  groundh0g
+    # FIXME: actually use admin alias as default in posts (and pages?)
+    admin:        # the "admin" author alias is reserved, used as default when no author is specified
+      name:       Administrator
+      alias:      admin
+      showInList: true # you can hide this little guy
+      image:      images/contributors/admin.png
+      role:       Filth-Dimensional Being
+      bio: > # brief description goes here
+        The "admin" alias is a reserved account, used as default when no author is specified.<br/>
+        You can hide this account by adding "showInList: false" to the "_config.yml" file.
+      email:      hello@jaytch.org
+      website:    http://jaytch.org/
+      twitter:    GetJaytch
+
+  analytics : # settings for analytics, set 'provider' to the analytics provider you want to use
+    provider : google # Set 'provider' to false to turn analytics off entirely
+    gauges :
+        site_id : 'SITE ID'
+    google :
+        tracking_id : 'UA-3294285-3'
+    googleLegacy :
+        tracking_id : 'UA-3294285-3'
+    getclicky :
+      site_id :
+    mixpanel :
+        token : '_MIXPANEL_TOKEN_'
+    baidu :
+        token : '_BAIDU_TOKEN_'
+    piwik :
+        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+        idsite : '1'                   # the id of the site on Piwik
+
+  comments : # settings for comments helper, set 'provider' to the comment provider you want to use
+    provider : facebook # Set 'provider' to false to turn commenting off entirely
     disqus :
-      short_name : fauxcabulary
+      short_name : myname
     livefyre :
       site_id : 123
     intensedebate :
       account : 123abc
     facebook :
-      appid : 123
+      appid : 192808807437152
       num_posts: 5
       width: 580
       colorscheme: light
-   
-  # Settings for analytics helper
-  # Set 'provider' to the analytics provider you want to use.
-  # Set 'provider' to false to turn analytics off globally.
-  #        
-  analytics :
-    provider : google 
-    google : 
-        tracking_id : 'UA-3294285-3'
-    getclicky :
-      site_id : 
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
-    piwik :
-        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
-        idsite : '1'                   # the id of the site on Piwik
-
-  # Settings for sharing helper. 
-  # Sharing is for things like tweet, plusone, like, reddit buttons etc.
-  # Set 'provider' to the sharing provider you want to use.
-  # Set 'provider' to false to turn sharing off globally.
-  #
-  sharing :
-    provider : false
-    
-  # Settings for all other include helpers can be defined by creating 
-  # a hash with key named for the given helper. ex:
-  #
-  #   pages_list :
-  #     provider : "custom"   
-  #
-  # Setting any helper's provider to 'custom' will bypass the helper code
-  # and include your custom code. Your custom file must be defined at:
-  #   ./_includes/custom/[HELPER]
-  # where [HELPER] is the name of the helper you are overriding.
-  
+    duoshuo :
+      short_name : myname
