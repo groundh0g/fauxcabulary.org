@@ -10,9 +10,7 @@ title: Jaytch!             # overridden in  jaytch.title, but some other templat
 tagline: The Jekyll Helper # overridden in  jaytch.tagline, but some other templates may use this
 email: hello@fauxcabulary.org # overridden in  jaytch.authors, but some other templates may use this
 description: > # overridden in  jaytch.description, but some other templates may use this
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Fauxcabulary.org is a place to store my terrible puns. You're Welcome.
 baseurl: "" # the subpath of your site, e.g. /blog
 # FIXME: url: "http://groundh0g.github.io" # the base hostname & protocol for your site
 url: "http://fauxcabulary.org" # the base hostname & protocol for your site
@@ -193,16 +191,7 @@ jaytch:
       quote:
         type: quote
         title:
-        quote: # use page's quote
-      quote2:
-        type: quote
-        quote: You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality. -- <a href="http://www.brainyquote.com/quotes/authors/w/walt_disney.html">Walt Disney</a>
-      quote3:
-        type: quote
-        quote: Women are like teabags. We don't know our true strength until we are in hot water!
-      quote4:
-        type: quote
-        quote: # use the page's quote
+        quote: A pun is the lowest form of humor, unless you thought of it yourself. -- <a href="http://www.brainyquote.com/quotes/quotes/d/douglarson107444.html">Doug Larson</a>
       calendar:
         title: History ...
         date:  # date of most recent post
