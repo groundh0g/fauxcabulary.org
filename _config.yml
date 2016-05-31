@@ -94,7 +94,7 @@ jaytch:
         nav_inverse: true
         nav_links: [ # the main menu links at the top of every page
           "Archive|/archive",
-          #"Tags|/tags",
+          "Wordplay Game|http://groundh0g.github.io/games.codetopia.com/wordplay/wordplay.html",
           "Gallery|/gallery",
           "Commer¢e|/store"
         ]
