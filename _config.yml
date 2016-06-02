@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Jaytch!             # overridden in  jaytch.title, but some other templates may use this
-tagline: The Jekyll Helper # overridden in  jaytch.tagline, but some other templates may use this
+title: Fauxcabulary.org             # overridden in  jaytch.title, but some other templates may use this
+tagline: Fake definitions. Real funny. # overridden in  jaytch.tagline, but some other templates may use this
 email: hello@fauxcabulary.org # overridden in  jaytch.authors, but some other templates may use this
 description: > # overridden in  jaytch.description, but some other templates may use this
   Fauxcabulary.org is a place to store my terrible puns. You're Welcome.
@@ -32,12 +32,10 @@ markdown: kramdown
 jaytch:
   version : 0.1.0
 
-  title: Jaytch!             # Your blog or site title.
-  tagline: The Jekyll Helper # Your blog or site tagline.
+  title: Fauxcabulary.org             # Your blog or site title.
+  tagline: Fake definitions. Real funny. # Your blog or site tagline.
   description: > # An awesome description of your blog or site.
-    A rewite of JekyllBootstrap (plusjade/jekyll-bootstrap) that
-    is built from the ground up to support Jekyll 3.x and Bootstrap 3.x,
-    while targeting the dependencies of GitHub Pages.
+    Fauxcabulary.org is a place to store my terrible puns. You're Welcome.
 
   page_404: sticky # badge | dog | droids | glass | link | milk | monster | potty | shrug | sticky | tweet | zork
   tweetHash:     "jaytch #blogs #OSS" # don't hash first tag

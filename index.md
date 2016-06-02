@@ -1,6 +1,6 @@
 ---
 layout: home
-title: The Landing Page
+title: Fauxcabulary
 showTitle: false
 ---
 
