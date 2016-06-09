@@ -58,3 +58,5 @@
   Foreclosed - having shut down several shops
   Dandelions - a gay pride
   Generating - a classification or ranking of Bruce or Caitlyn
+  Potluck - charmed cannabis
+  
