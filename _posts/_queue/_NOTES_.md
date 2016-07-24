@@ -60,4 +60,25 @@
   Generating - a classification or ranking of Bruce or Caitlyn
   Potluck - charmed cannabis
   Vacillate - a tardy servant
+  Aviate - one veggie drink
+  Generally? - 
+  Sublime? - 
+  Dinosaur? -
+  Catalog? -
+  Location? -
+  Submit? -
+  Current? -
+  Account? -
+  Margin? - 
+  Spreadsheet? -
+  Soonest - (sue nest)
+  Bangalore -
+  Fixate? -
+  Solo? -
+  Nautical? -
+  Sunny -
+  Stylus -
+  Question -
+  Buzzer -
+  Percent?? -
   
