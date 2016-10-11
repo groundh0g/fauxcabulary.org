@@ -41,7 +41,7 @@
   Condescending - a prisoner on his way down
   Construct - hit forcibly by an inmate
   Matrix - post-April prestidigitation
-  Identity - something uttered by a breast
+  Identity - exclamation of damage to a consonant
   Define - to remove a fee
   Episode - above a seamstress
   Illiterate - eighth in a series of young sick animals
@@ -61,24 +61,22 @@
   Potluck - charmed cannabis
   Vacillate - a tardy servant
   Aviate - one veggie drink
-  Generally? - 
-  Sublime? - 
-  Dinosaur? -
-  Catalog? -
-  Location? -
-  Submit? -
-  Current? -
-  Account? -
-  Margin? - 
-  Spreadsheet? -
-  Soonest - (sue nest)
-  Bangalore -
-  Fixate? -
-  Solo? -
-  Nautical? -
-  Sunny -
-  Stylus -
-  Question -
-  Buzzer -
-  Percent?? -
-  
+  Sublime - underwater citrus 
+  Dinosaur - to avoid coloring injuries
+  Catalog - to add a feline to a fallen tree
+  Location - to ignore a small consonant
+  Current - a contemptible man's lease payment
+  Account - one tally
+  Margin - to damage an adult beverage
+  Spreadsheet - a step in bed making
+  Soonest - to bring legal action against a bird's home
+  Bangalore - intercourse with a legend
+  Fixate - to repair fewer than nine
+  Solo - very near the ground
+  Nautical - an exclamation to call for laughter
+  Sunny - to expose a leg joint to daylight
+  Stylus - to fix our hair
+  Buzzer - to buy a date a shot
+  Endorphins - sheltered aquatic appendages
+  Comply - a free untruth
+  Analgesic - unwell nonflowering plants
