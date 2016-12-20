@@ -1,4 +1,4 @@
-<div class="col-lg-12">
+<div class="col-lg-12"> 
 
     <div style="background-color:#88a; color:#fff; text-align:center;">
         <table border="0" cellpadding="0" cellspacing="0" style="margin:0 auto; background-color:inherit;">
