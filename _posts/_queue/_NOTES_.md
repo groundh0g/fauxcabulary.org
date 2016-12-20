@@ -50,7 +50,7 @@
   Thicken - fat relatives
   Phoenix - to eliminate a tax
   Cuties - attractive vowels
-  Largesse - a huge consonant
+  Largess - a huge consonant
   Adultery - an established arbour; a slow grownup
   Unix - a command to remove something
   Napalm - no hands allowed
