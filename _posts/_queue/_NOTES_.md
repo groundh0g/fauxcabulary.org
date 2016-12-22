@@ -1,4 +1,4 @@
-  Gastric - [pull my finger]
+  Gastric - a finger-centered prank
   Sovereignty - an autonomous shirt
   Emergency - a rising tide
   Abhor - a gym addict
