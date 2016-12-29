@@ -1,4 +1,4 @@
-  Gastric - a finger-centered prank
+  Gastric - a finger-centric prank
   Sovereignty - an autonomous shirt
   Emergency - a rising tide
   Abhor - a gym addict
@@ -80,3 +80,4 @@
   Endorphins - sheltered aquatic appendages
   Comply - a free untruth
   Analgesic - unwell nonflowering plants
+  Ramen
