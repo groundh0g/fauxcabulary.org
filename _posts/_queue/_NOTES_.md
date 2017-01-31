@@ -80,4 +80,5 @@
   Endorphins - sheltered aquatic appendages
   Comply - a free untruth
   Analgesic - unwell nonflowering plants
-  Ramen
+  Ramen - masculine sun worshipers
+  Impressum - to make others feel admiration
