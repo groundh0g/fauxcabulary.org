@@ -83,3 +83,5 @@
   Ramen - masculine sun worshipers
   Impressum - to make others feel admiration
   Percocet - a push-up brassiere
+  Stereotype - to use both hands with a keyboard
+  
