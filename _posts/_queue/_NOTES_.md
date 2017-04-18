@@ -85,3 +85,4 @@
   Percocet - a push-up brassiere
   Stereotype - to use both hands with a keyboard
   Betterment - an improved candy
+  Protest - a licensing exam
