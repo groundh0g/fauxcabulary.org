@@ -87,4 +87,5 @@
   Betterment - an improved candy
   Protest - a licensing exam
   Accomplishments - candies for a job well done
+  Tunics - twice cut in shaving
   
