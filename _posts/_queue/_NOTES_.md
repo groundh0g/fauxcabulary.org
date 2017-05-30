@@ -88,3 +88,9 @@
   Protest - a licensing exam
   Accomplishments - candies for a job well done
   Tunics - twice cut in shaving
+  Celiac - a goofy, long-haired bovid
+  ?? Firecracker - to dismiss a redneck?
+  Barking - a drunken ruler?
+  ??Kidnapping - a sleeping child
+  Toucans - a couple of metallic containers
+  
