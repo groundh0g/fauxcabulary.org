@@ -91,6 +91,7 @@
   Celiac - a goofy, long-haired bovid
   ?? Firecracker - to dismiss a redneck?
   Barking - a drunken ruler?
-  ??Kidnapping - a sleeping child
+  ?? Kidnapping - a sleeping child
   Toucans - a couple of metallic containers
   Beatitudes - the demeanor of specific insects
+  ?? Custard - to swear at poo
