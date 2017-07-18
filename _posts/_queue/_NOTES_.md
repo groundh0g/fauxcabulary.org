@@ -96,4 +96,6 @@
   Beatitudes - the demeanor of specific insects
   ?? Custard - to swear at poo
   Glockenspiel - a sales pitch for firearms
+  Tumor - a couple of additional items
+  
   
