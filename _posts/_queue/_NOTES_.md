@@ -99,4 +99,4 @@
   Tumor - a couple of additional items
   ?? Authenticate - a genuine octet
   ?? Petri - a campsite urinal  
-  
+  Biased - possessing two buttocks
