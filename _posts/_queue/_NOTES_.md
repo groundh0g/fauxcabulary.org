@@ -100,3 +100,4 @@
   ?? Authenticate - a genuine octet
   ?? Petri - a campsite urinal  
   Biased - possessing two buttocks
+  Excess - two consonants
