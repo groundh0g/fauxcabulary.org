@@ -101,3 +101,6 @@
   ?? Petri - a campsite urinal  
   Biased - possessing two buttocks
   Excess - two consonants
+  Forbids - an active auction
+  Authorize - a writer's peepers
+  Prius - before we first dated
