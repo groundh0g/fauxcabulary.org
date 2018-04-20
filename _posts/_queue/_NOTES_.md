@@ -104,4 +104,6 @@
   Forbids - an active auction
   Authorize - a writer's peepers
   Prius - before we first dated
-  ?? Argon - a missing consonant
+  ?? Argon - a missing consonant; the result of successful speech therapy for a pirate
+  Sixties - T, T, T, T, T, T
+  Aftermath - no more cyphers
