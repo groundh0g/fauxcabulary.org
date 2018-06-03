@@ -107,3 +107,5 @@
   ?? Argon - a missing consonant; the result of successful speech therapy for a pirate
   Sixties - T, T, T, T, T, T
   Aftermath - no more cyphers
+  Until - to smooth grooved soil
+  Poodle - a fecal valley
