@@ -105,8 +105,31 @@
   Authorize - a writer's peepers
   Prius - before we first dated
   ?? Argon - a missing consonant; the Boston accent; speech therapy for a pirate
-  Sixties - T, T, T, T, T, T
+  Sixties - a half-dozen shirts
   Aftermath - no more cyphers
   Until - to smooth grooved soil
   Poodle - a fecal valley
   Capsize - a measure of headwear
+  Ideal - the utterance of a casino worker
+  Forthcoming - the 3rd apocalypse
+  ?? Remain - hair replacement for lions
+  Frothy - a cold, lispy day
+  Countdown - a tally of duck and goose fur
+  Hehe - a gay couple
+  2018 - a score of cannibals feasting on a young adult
+  Bearded - a flat ale
+  ?? Twenties - matching shirts; flirtatious sisters
+  Victim - two gents
+  Online - location of a tightrope walker
+  ?? Humor - to add color
+  Abby - an insect on your belly
+  Benson - a transitioned female
+  Bassoon - likely outcome of a sheep's open mouth
+  Permission - for every undertaking
+  Repeat - along with sow, a sustainable form of nutrition
+  Overdraft - a conversation with beers
+  ?? Pseudo - a lawyer's money
+  ?? Literally - a messy path between buildings
+  Package - the collective age of a group of wolves
+  Subtract - the thrust provided by a propeller
+  
