@@ -8,5 +8,5 @@ term: indulgence
 
 <h3>Indulgence<br/> <small>&mdash; v. (in<span>&middot;</span>dul<span>&middot;</span>gence)</small></h3>
 <p><ol>
-<li>to allow an insect pleasure</li>
+<li>to allow men pleasure</li>
 </ol></p>

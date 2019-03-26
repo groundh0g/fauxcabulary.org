@@ -131,5 +131,6 @@
   ?? Pseudo - a lawyer's money
   ?? Literally - a messy path between buildings
   Package - the collective age of a group of wolves
-  Subtract - the thrust provided by a propeller
+  Subtraction - the thrust provided by a propeller
+  Mignon - males when exhausted or bored
   
