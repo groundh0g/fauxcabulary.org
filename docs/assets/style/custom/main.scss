@@ -1,0 +1,513 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+{% include read-config.liquid %}
+
+//@import "minima";
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 396px;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 18px;
+  line-height: 36px;
+  border: 2px solid #ccc;
+  //-webkit-border-radius: 8px;
+  //-moz-border-radius: 8px;
+  //border-radius: 8px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {
+  width: 422px;
+  margin: 12px 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  //-webkit-border-radius: 8px;
+  //-moz-border-radius: 8px;
+  //border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #0097cf;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.navbar-brand,
+#navbarSupportedContent ul {
+  margin-left: 10px;
+}
+
+.home-img {
+  width: 100%;
+}
+
+.home-text {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.home-greet {
+  padding-top: 3vmin;
+  font-size: calc(2em + 5vmin);
+  font-weight: bolder;
+}
+
+.home-moniker {
+  font-size: calc(1.5em + 1vmin);
+  font-weight: bolder;
+}
+
+.home-bio {
+  font-size: calc(1em + 0.3vmin);
+  font-weight: normal;
+}
+
+
+.not-found-404 {
+  margin: 0;
+  text-align: center;
+}
+
+//.not-found-404 p {
+//  background-color: yellow;
+//  padding: 0 3vw;
+//}
+
+.not-found-404 img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.homepage .post-header { text-align: center; }
+
+.homepage .standalone-image {
+  margin-top: 5vmin;
+  margin-bottom: 8vmin;
+  width: 33vmin;
+}
+
+.homepage h1 {
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+.homepage h1 small {
+  font-size: 0.8em;
+  font-weight: normal;
+}
+
+.homepage .post-tagline {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 2vmin;
+}
+
+.homepage p {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+p.copyright {
+  font-size: 0.8em;
+  font-weight: normal;
+  text-align: center;
+}
+
+.service-item img {
+  width: 33vmin;
+}
+
+.service-item img.float-left {
+  float: left;
+  margin-right: 5vmin;
+}
+
+.service-item img.float-right {
+  float: right;
+  margin-left: 5vmin;
+}
+
+div.service-item {
+  margin-bottom: 13vmin;
+  clear: both;
+}
+
+.about-resume-row {
+  clear-after: both;
+}
+
+.about-resume-avatar {
+  width: 33vmin;
+  float: left;
+  margin-right: 5vmin;
+  margin-bottom: 5vmin;
+}
+
+.tiny {
+  font-size: 0.5em;
+}
+
+.about-resume-person {
+  //clear-after: both;
+  margin-top: 5vmin;
+  margin-bottom: 10vmin;
+}
+
+.about-resume-item {
+  clear: both;
+  margin: 2.5vmin 0;
+
+}
+
+.about-resume-item-section {
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.about-resume-item-section h1 {
+  font-weight: bolder;
+  //width: 100%;
+  //text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+  h1.post-title { display: none; }
+
+}
+
+//@media (max-width: 767px) {
+@media (max-width: 991px) {
+
+  body {
+    text-align: center;
+  }
+
+  .about-resume-avatar {
+    width: 100%;
+    float: none;
+    margin-bottom: 10vmin;
+  }
+
+  .about-resume-col-detail {
+    margin-bottom: 3vmin;
+  }
+
+  .about-resume-title {
+    font-weight: bolder;
+  }
+
+  .service-item {
+    text-align: center;
+  }
+
+  .service-item img {
+    width: 50%;
+    margin: 1vmin auto 5vmin;
+  }
+
+  .service-item img.float-left {
+    float: none !important;
+    //margin: 10vmin 5vmin 10vmin;
+  }
+
+  .service-item img.float-right {
+    float: none !important;
+    //margin: 10vmin 5vmin 10vmin;
+  }
+
+  div.service-item {
+    font-size: 1.2em;
+    margin-bottom: 13vmin;
+    clear: both;
+  }
+
+  .post-content img {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// background tiling image for light/dark themes
+
+body {
+  background-image: url('{{ config.customize.background | prepend: "/assets/images/background-" | append: ".png" | relative_url }}');
+  background-repeat: repeat;
+}
+
+body.dark {
+  color: #eee;
+}
+
+body.light {
+  color: #000;
+}
+
+.quote-div div {
+  font-family: Georgia, serif;
+  text-align: center;
+}
+
+.quote-div div blockquote {
+  //font-family: Georgia, serif;
+  position: relative;
+  display: inline-block;
+  margin: 0.5em auto;
+  padding: 0.5em 2em 0.5em 3em;
+  font-size: 1.75em;
+}
+
+.quote-div div blockquote:before {
+  //font-family: Georgia, serif;
+  position: absolute;
+  font-size: 6em;
+  line-height: 1;
+  top: 0;
+  left: 0;
+  content: "\201C";
+}
+
+//.quote-div div blockquote:after {
+//  //font-family: Georgia, serif;
+//  position: absolute;
+//  font-size: 6em;
+//  line-height: 1;
+//  top: 0;
+//  right: -0.12em;
+//  content: "\201D";
+//}
+
+.quote-div div blockquote footer {
+  padding: 0 2em 0 0;
+  text-align:center;
+}
+
+.quote-div div blockquote cite:before {
+  content: "\2013";
+}
+
+@media only screen and (max-width: 512px) {
+  .quote-div div blockquote br {
+    display: none;
+  }
+}
+
+
+.fauxcab-button-col {
+  max-width: 35px;
+}
+
+.fauxcab-term {
+  float: left;
+  min-height: 295px;
+  width: 275px;
+  margin: 10px;
+  text-align: left;
+  padding: 0 15px;
+  pointer-events: none;
+}
+
+.fauxcab-term ol {
+  padding-left: 1em;
+}
+
+.fauxcab-term h3 {
+  margin-bottom: 0;
+}
+
+.fauxcab-date {
+  white-space: nowrap;
+}
+
+.fauxcab-defs {
+  margin: 1em 0;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+
+// add optional dotted underlines to active navbar items
+
+.navbar-dark .navbar-brand.active.underlineActive,
+.navbar-dark .dropdown-item.active.underlineActive,
+.navbar-dark .nav-link.active.underlineActive {
+  border-bottom: 2px dotted white;
+}
+
+.navbar-light .navbar-brand.active.underlineActive,
+.navbar-light .dropdown-item.active.underlineActive,
+.navbar-light .nav-link.active.underlineActive {
+  border-bottom: 2px dotted black;
+}
+
+
+// with fixed navbar, lower the heading text so it shows below when scrolled to
+
+body.homepage h1,
+body.homepage h2,
+body.homepage h3,
+body.homepage h4,
+body.homepage h5 {
+  scroll-margin-top: 2em;
+}
+
+
+// TODO: better place for this??
+
+.hidden { display: none; }
+
+
+// TODO: better place for this??
+
+.image-img {
+  width: 90%;
+  border: 2px solid white;
+}
+
+
+// page TOC
+
+div.page-toc {
+  text-align: left;
+}
+
+div.page-toc a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.page-toc a:hover {
+  border-bottom: 3px dotted;
+}
+
+div.page-toc ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  margin-left: 12px;
+  font-family: "Arial", sans-serif;
+}
+
+div.page-toc > ul {
+  margin-left: 0;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  font-family: "Arial Black", sans-serif;
+}
+
+
+// responsive captions for carousel on homepage
+
+body.homepage .carousel-caption h5 {
+  font-weight: bolder;
+}
+
+@media (max-width: 349px) {
+  body.homepage .carousel-caption.d-none.d-md-block p,
+  body.homepage .carousel-caption.d-none.d-md-block h5 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  body.homepage .carousel-caption.d-none.d-md-block {
+    display: block !important;
+  }
+
+  body.homepage .carousel-caption.d-none.d-md-block h5 {
+    display: block;
+    font-size: 5vmin;
+    white-space: nowrap;
+  }
+
+  body.homepage .carousel-caption.d-none.d-md-block p {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  body.homepage .carousel-caption.d-none.d-md-block h5 {
+    font-size: 5vmin;
+    white-space: nowrap;
+  }
+
+  body.homepage .carousel-caption.d-none.d-md-block p:nth-child(2) {
+    display: none;
+    font-size: 3vmin;
+  }
+}
+
+@media (min-width: 992px) {
+  body.homepage .carousel-caption.d-none.d-md-block h5 {
+    font-size: 5vmin;
+  }
+
+  body.homepage .carousel-caption.d-none.d-md-block p {
+    font-size: 2vmin;
+  }
+}

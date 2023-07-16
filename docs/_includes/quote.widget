@@ -1,0 +1,14 @@
+{% include read-config.liquid %}
+
+<div class="quote-div">
+  <div>
+    <blockquote>
+      {{ include.text }}
+      <footer>
+        <cite>
+          <a href="{{ include.link }}" target="_blank">{{ include.author }}</a>
+        </cite>
+      </footer>
+    </blockquote>
+  </div>
+</div>
