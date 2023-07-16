@@ -17,9 +17,9 @@ title: Fauxcabulary.org
 email: hello@fauxcabulary.org
 description: >- # this means to ignore newlines until "baseurl:"
   Fauxcabulary.org is a place to store my terrible puns. You're welcome.
-baseurl: "/" # "/fauxcabulary.org" # the subpath of your site, e.g. /blog
-url: https://fauxcabulary.org # "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
-#url: "https://groundh0g.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: # "/fauxcabulary.org" # the subpath of your site, e.g. /blog
+#url: "http://localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
+url: https://fauxcabulary.org # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: groundh0g
 github_username:  groundh0g
 

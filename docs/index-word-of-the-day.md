@@ -1,5 +1,5 @@
 <div id="wod-div">
-  <h1 id="wod-main">Word of <span>the Day</span></h1>
+  <h1 id="wod-main">Word of <span class="nowrap">the Day</span></h1>
   <p id="wod-text">Hello!</p>
   <p class="wod-says">(<span id="wod-says">foo</span>)</p>
   <p class="wod-part">&mdash; <span id="wod-part">n.</span></p>

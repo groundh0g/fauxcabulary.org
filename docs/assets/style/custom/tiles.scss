@@ -229,17 +229,10 @@ $letters: "FAUXCABULARY.ORG";
   margin-bottom: 47px;
 }
 
-#wod-main span {
+span.nowrap {
   display: inline-block;
   white-space: nowrap;
 }
-
-//#wod-div ol,
-//#wod-div ol li {
-//  list-style-type: none;
-//  //margin-left: 1px;
-//  //padding-left: 1px;
-//}
 
 #wod-text {
   font-size: 2.1em;

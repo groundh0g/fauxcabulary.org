@@ -13,13 +13,11 @@ gists:
 
 {% include_relative index-tile-swatch.md %}
 
+<div class="align-center"><h3>Fake definitions. <span class="nowrap">Real funny.</span></h3></div>
+
+{% include hr.widget %}
+
 {% include_relative index-word-of-the-day.md %}
-
-
-{% comment %}
-{% include button.widget color="success" label="Call to Action" link="#documentation" %}
-{% endcomment %}
-
 
 {% include hr.widget %}
 
