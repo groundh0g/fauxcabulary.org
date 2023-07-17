@@ -23,6 +23,9 @@ navbar:
         link: /gallery/
       - item: Shop
         link: /shop/
+      - item: Games
+        link: https://games.joehall.net/
+        targ: _blank
       - item: Blog
         link: /blog/
         activeWhenContains: /blog/ # highlight as active when the url includes the given text

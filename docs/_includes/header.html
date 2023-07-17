@@ -36,7 +36,7 @@
                   {% for child in item.items %}
                     {% assign active_class = "" %}
                     {% if child.link == page.permalink %}{% assign active_class = "active" %}{% endif %}
-                    <a class='dropdown-item {{ active_class | append: active_underline_class }}' href="{{ child.link | relative_url }}">{{ child.item | default: "unlabeled" }}</a>
+                    <a class='dropdown-item {{ active_class | append: active_underline_class }}' href="{{ child.link | relative_url }}" {% if item.targ %}target="{{ item.targ }}"{% endif %}>{{ child.item | default: "unlabeled" }}</a>
                   {% endfor %}
                 </div>
               </li>
@@ -45,7 +45,7 @@
                 {% assign active_class = "" %}
                 {% if page.url contains item.activeWhenContains %}{% assign active_class = "active" %}{% endif %}
                 {% if item.link == page.permalink %}{% assign active_class = "active" %}{% endif %}
-                <a class='nav-link {{ active_class | append: active_underline_class }}' href='{{ item.link | relative_url }}'>{{ item.item | default: "unlabeled" }}</a>
+                <a class='nav-link {{ active_class | append: active_underline_class }}' href='{{ item.link | relative_url }}' {% if item.targ %}target="{{ item.targ }}"{% endif %}>{{ item.item | default: "unlabeled" }}</a>
               </li>
             {% endif %}
           {% endfor %}
