@@ -397,6 +397,18 @@ body.light {
   border-radius: 5vmin;
 }
 
+.countdown {
+  white-space: nowrap;
+}
+
+#countdown-days,
+#countdown-hours,
+#countdown-minutes,
+#countdown-seconds {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
 // add optional dotted underlines to active navbar items
 
 .navbar-dark .navbar-brand.active.underlineActive,

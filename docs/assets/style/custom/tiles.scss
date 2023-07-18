@@ -92,7 +92,7 @@ $letters: "FAUXCABULARY.ORG";
     }
   }
 
-  @media screen and (max-width: 474px) {
+  @media screen and (max-width: 330px) {
     .header-tile.board-tile-F#{$i}.board-cell.board-cell-tile {
       @if $i > 7 {
         opacity: 0;

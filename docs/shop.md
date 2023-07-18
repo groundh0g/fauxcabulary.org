@@ -6,7 +6,7 @@ showTitle: false
 
 # Shop for Merch
 
-Feeling a little spend-happy? Check out our wares and see if anything this this collection cranks your tractor!
+Feeling a little spend-happy? Check out our wares and see if anything in this collection cranks your tractor!
 
 {% include hr.widget %}
 

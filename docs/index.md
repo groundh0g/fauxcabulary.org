@@ -21,6 +21,10 @@ gists:
 
 {% include hr.widget %}
 
+{% include countdown.widget %}
+
+{% include hr.widget %}
+
 {% include quote.widget text="A pun is the lowest form of humor,<br/> unless you thought of it yourself." author="Doug Larson" link="https://www.brainyquote.com/quotes/doug_larson_107444" %}
 
 {% include hr.widget %}

@@ -15,9 +15,9 @@
       {% if "/" == page.url and config.navbar.menu.homepage.underlineActive and config.navbar.underlineActive %}{% assign active_underline_class = "active underlineActive" %}{% endif %}
       <a class="navbar-brand {{ active_underline_class }}" href='{{ "/" | relative_url }}'>{% if navbar_logo %}<img src='{{ navbar_logo }}' alt="site logo" width="24" height="24" /> {% endif %}{{ config.navbar.menu.homepage.text | default: config.metadata.title }}</a>
       {% endif %}
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!--      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--      </button>-->
       {% assign align_menu_items_right = "" %}
       {% if config.navbar.menu.pullRight %}{% assign align_menu_items_right = "d-flex justify-content-end" %}{% endif %}
       <div class="{{ align_menu_items_right }}">
@@ -58,7 +58,11 @@
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
           </form>
           {% endif %}
+
         </div>
       </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
   </nav>
