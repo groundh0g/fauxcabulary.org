@@ -1,13 +1,13 @@
 {% include read-config.liquid %}
 
-<p> Next term in:
-<span class="countdown">
-<!--    <span id="countdown-days">0</span>d-->
-    <span id="countdown-hours">0</span>h
-    <span id="countdown-minutes">0</span>m
-    <span id="countdown-seconds">0</span>s
-</span>
-</p>
+<div class="countdown-wrapper"> Next term in:
+        <span class="countdown">
+        <!--    <span id="countdown-days">0</span>d-->
+            <span id="countdown-hours">0</span>h
+            <span id="countdown-minutes">0</span>m
+            <span id="countdown-seconds">0</span>s
+        </span>
+</div>
 
 <script type="text/javascript">
     var timer;
@@ -36,7 +36,7 @@
             initCountdown();
         }
 
-        $("#countdown-days").text(String(Math.floor(distance / _day)).padStart(2, '0'));
+        // $("#countdown-days").text(String(Math.floor(distance / _day)).padStart(2, '0'));
         $("#countdown-hours").text(String(Math.floor((distance % _day) / _hour)).padStart(2, '0'));
         $("#countdown-minutes").text(String(Math.floor((distance % _hour) / _minute)).padStart(2, '0'));
         $("#countdown-seconds").text(String(Math.floor((distance % _minute) / _second)).padStart(2, '0'));
