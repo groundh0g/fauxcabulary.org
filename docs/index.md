@@ -1,8 +1,8 @@
 ---
 layout: page
 class:  homepage
-title: "JekyllFaces<small><small>.com</small></small>"
-tagline: Write simply. Make more. Host freely.
+title: Fauxcabulary
+tagline: Fake definitions. Real funny.
 logo: "/assets/images/logo-1024x1024.png"
 #trademark: "Hiive and its logo are registered trademarks of Hiive, LLC." 
 #copyright: "All content &copy; 2012-CURRENT_YEAR by Hiive, LLC."
