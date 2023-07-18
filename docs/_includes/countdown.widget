@@ -1,12 +1,12 @@
 {% include read-config.liquid %}
 
 <div class="countdown-wrapper"> Next term in:
-        <span class="countdown">
-        <!--    <span id="countdown-days">0</span>d-->
-            <span id="countdown-hours">0</span>h
-            <span id="countdown-minutes">0</span>m
-            <span id="countdown-seconds">0</span>s
-        </span>
+    <span class="countdown">
+    <!--    <span id="countdown-days">0</span>d-->
+        <span id="countdown-hours">0</span>h
+        <span id="countdown-minutes">0</span>m
+        <span id="countdown-seconds">0</span>s
+    </span>
 </div>
 
 <script type="text/javascript">
