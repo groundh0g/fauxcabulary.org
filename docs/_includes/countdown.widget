@@ -33,7 +33,10 @@
         if (distance < 0) {
             distance = 0;
             clearInterval(timer);
-            initCountdown();
+            setTimeout(() => {
+                window.location.reload();
+            }, 500);
+            // initCountdown();
         }
 
         // $("#countdown-days").text(String(Math.floor(distance / _day)).padStart(2, '0'));
